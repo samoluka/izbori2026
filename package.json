@@ -1,0 +1,22 @@
+{
+  "name": "izbori2026-mapa",
+  "version": "1.0.0",
+  "description": "Mapa rezultata parlamentarnih izbora 2026 po opštinama (izvor: RIK)",
+  "main": "server.mjs",
+  "scripts": {
+    "start": "node server.mjs",
+    "update:results": "node scripts/fetch-results.mjs",
+    "build:geo": "node scripts/build-geo.mjs",
+    "build:stations": "node scripts/build-stations.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "d3-delaunay": "^6.0.4",
+    "mapshaper": "^0.7.90",
+    "osmtogeojson": "^3.0.0-beta.5",
+    "polygon-clipping": "^0.15.7"
+  },
+  "type": "module"
+}

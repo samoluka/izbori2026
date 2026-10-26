@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Parlamentarni izbori 2026 — rezultati po opštinama</title>
+<meta name="description" content="Mapa rezultata parlamentarnih izbora 2026. u Srbiji po opštinama. Izvor: Republička izborna komisija." />
+<link rel="icon" href="favicon.svg" type="image/svg+xml" />
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div id="map"></div>
+
+<aside id="side" class="panel">
+  <header class="side-head">
+    <div>
+      <h1>Parlamentarni izbori 2026</h1>
+      <div class="sub">Rezultati po opštinama · <span id="updated">…</span></div>
+    </div>
+    <button id="toggle-side" class="icon-btn" title="Sakrij/prikaži panel">⇤</button>
+  </header>
+
+  <div class="side-body">
+    <div class="search-wrap">
+      <input id="search" type="search" placeholder="Pretraži opštinu…" autocomplete="off" />
+      <div id="search-results" class="search-results" hidden></div>
+    </div>
+
+    <div class="mode-tabs" id="mode-tabs">
+      <button data-mode="pobednik">Pobednik</button>
+      <button data-mode="lista">Po listi</button>
+      <button data-mode="izlaznost">Izlaznost</button>
+    </div>
+    <select id="list-select" class="select" hidden></select>
+
+    <section id="detail"></section>
+  </div>
+  <footer class="foot">
+    Izvor rezultata: <a id="src-link" href="https://www.rik.parlament.gov.rs/542645/rezultati/" target="_blank" rel="noopener">Republička izborna komisija</a> (automatsko osvežavanje).
+    Granice i podloga: © OpenStreetMap saradnici. Lokacije biračkih mesta: geokodirani spisak sa rezultatiizbora.rs; oblasti biračkih mesta su približne.
+  </footer>
+</aside>
+
+<div id="legend" class="panel"></div>
+<div id="tooltip" hidden></div>
+
+<script src="app.js"></script>
+</body>
+</html>
